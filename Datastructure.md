@@ -1,4 +1,4 @@
-# Data-Structure
+# DataStructure
 
 ## Data structure?
 현실을 프로그래밍적으로 표현하는 것
