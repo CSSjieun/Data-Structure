@@ -98,6 +98,39 @@ main: 만들고 싶은 프로그램이 있다면 반드시 public static void ma
 
 메소드의 출력값: return
 
+### 10. 입력과 출력 I/O
+예를 들어 사용자의 키보드, 마우스, 터치를 입력으로 받아들일 수 있고, 그에 따른 처리 결과를 모니터나 스피커등으로 출력 할 수 있다. <br>
+입력 값이 없는 application은 input이 없는 method처럼 똑같은 결과를 반복하는 것에 불과하다. <br>
+--> CLI (Command Line Interface)
+
+GUI (Graphic User Interface) <br>
+
+--> 절차 지향적 프로그래밍
+
+앞으로는 객체 지향적 프로그래밍
+
+### 11. 객체 지향 프로그래밍 Objectp-Oriented Programming 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
