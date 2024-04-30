@@ -1,152 +1,133 @@
-# Data-Structure
+# Java
+Compiler: javac ____.java
 
-## Data structure?
-현실을 프로그래밍적으로 표현하는 것
-![image](https://github.com/CSSjieun/Data-Structure/assets/152406885/1e452c79-7941-46e5-ba32-c113748b9e77)
+## 데이터 타입 Data Type
+### 1. 데이터의 크기
 
-ex) hierarchical strucrue, directory structure 
+8 bit (비트) = 1 byte <br>
+1024 bit = 1 kilobyte <br>
+1024 kilobyte = 1 megabyte <br>
+1024 megabyte = 1 gigabyte <br>
+1024 gigabyte = 1 terabyte <br>
+1024 terabyte = 1 petabyte <br>
+1024 petabyte = 1 exabyte <br>
+1024 exabyte = 1 zettabyte <br>
 
-큰 데이터를 효과적으로 관리하는 것 (정리 정돈의 진화)
-Document -> Book -> Bookshelf -> Library -> WWW / Internet/ Network
+컴퓨터는 0과 1로 이루어졌다는 말을 들어본 적이 있을 것이다. <br>
+0과 1이 bit다.
 
-공부법
-대전재: 몰라도 프로그램을 만들 수 있다 (프로그래밍 언어는 알아야 함)
-경험을 더 쌓아야 함
-포기 (멈춤) 와 유보 (잠시 멈췄다가 다시 공부하고 경험쌓고 돌아와서 다는 보는 것) 는 다르다.
+### 2. 형변환 Type Conversion
+<img width="783" alt="Screenshot 2024-04-27 at 20 42 04" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/d4f7d45b-9f69-45cd-8264-86beebdd3258">
 
-## Array
-거의 모든 언어에서 지원
-데이터가 많아지면 그룹 관리의 필요성이 생겨나고 이럴 때 사용하는 것이 array이다.
-여러 데이터를 하나의 이름으로 그룹핑해서 관리하기 위한 data structure. 
+### 3. 연산자 Operator
+대입 연산자 (x=1), 산술 Arithmetic 연산자 (+,-,...), 비교 연산자, 논리 연산자
 
-Value, Index, Element
+이항 연산자 infix operator (좌항 + 우항)
 
-## JAVA API
+단항 연산자: 예) +3: 양수 3, -3: 음수 3, 3++ (단항) = 3+1 (우항).
 
+### 4. Boolean
+참과 거짓을 의미하는 데이터 타입으로 bool이라고도 부른다. 
+
+=: 좌항의 값을 우항의 변수에 대입할 때 사용하는 것 <br>
+==: 같다.
+
+.equals는 문자열을 비교할 때 사용하는 메소드이다.
+
+a.equals(b);
+
+String b = new String("Hello World");
+
+### 5. 조건문 
+1. if절
+<img width="452" alt="Screenshot 2024-04-28 at 17 26 29" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/cbf1fd0e-db63-4c23-9e0f-cf84e7faae13">
+
+2. elseif와 else
+<img width="389" alt="Screenshot 2024-04-28 at 17 32 18" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/b515866e-c35e-4712-9edb-246254c3d505">
+
+<img width="483" alt="Screenshot 2024-04-28 at 17 34 21" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/2f57c649-95a8-49b1-b123-e766102046b8">
+
+3. Switch문 <br>
+switch 문을 사용할 때 한가지 주의 할 것은 switch의 조건으로는 몇가지 제한된 데이터 타입만을 사용할 수 있다. byte, short, char, int, enum, String, Character, Byte, Short, Integer
+
+### 6. 논리 연산자 Conditional Operator
+AND / OR
+
+Boolean and (&&) Boolean (전체가 참일때 참, 좌항 우항 둘 중 하나라도 거짓이면 거짓) <br>
+Boolean or  Boolean (||) 둘 중 하나라도 참이면 참, 둘 다 거짓이면 거짓)
+
+
+!true == not <br>
+!false == true
+
+### 7. 반복문 Loop, Iteration
+1. while문 <br>
 ```java
-int[] numbers1 = new int[4];
-
-# int: element data type 
-# []: it is array 
-# [x]: x is the array size 
-# numbers1: integer 
-
-numbers1[0]=10;
-numbers1[1]=20;
-numbers1[2]=30;
+while(조건){
+  반복 실행 영역
+} // 조건이 참일 동안 반복 실행 영역을 실행한다.
 ```
 
-<img width="811" alt="Screenshot 2024-04-27 at 13 23 24" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/b0a3c24a-d9e1-42df-bf82-90d030fc2d38">
-
+2. for문 <br>
 ```java
-int[] numbers2 = {10,20,30,40};
-
-int[] numbers3 = new int[]{10,20,30,40};
-
-String [] strings = new String[4]; 
-```
-
-# Character type
-
-### GET 가져오기
-```java
-System.out.println(numbers1[0]);
-``` 
-<img width="818" alt="Screenshot 2024-04-27 at 13 27 15" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/e8237ac1-e258-4f4d-86e0-20cf46436e67">
-
-### Size 크기
-```java
-System.out.println(numbers1.length);
-```
-elements의 갯수를 셀 때는 1부터 counting하므로 result = 4
-
-### Iteration 반복
-```java
-int i=0; 
-while(numbers1.length > i){ 
-  System.out.println(numbers1[i]); 
-  i++; <br>
-} 
-
-for(i=0; numbers1.length > i; i++){ 
-  System.out.println(numbers1[i]); 
+for(초기화; 종료조건; 반복실행){
+    반복적으로 실행될 구문
 }
 ```
 
-i=0: 초기값 설정 <br>
-numbers1.length > i: 이 값이 True 경우에만 반복문이 실행되는 조건 <br>
-i++: 반복문이 실행된 후 결과
+### 8. 배열 Array
+배열은 연관된 정보를 그룹핑 하는데 사용한다. 연관된 데이터를 모아서 관리하기 위해서 사용하는 데이터 타입이다. <br>
+변수가 하나의 데이터를 저장하기 위한 것이라면 배열은 여러 개의 데이터를 저장하기 위한 것이라고 할 수 있다. 
 
-크기가 정해져 있다, 기능이 없다.
+String[] classGroup에서 classGroup은 배열이 담길 변수의 이름이다. <br>
+String[]은 classGroup에 담을 배열에 담길 데이터의 타입이 문자열의 배열이라는 의미다. <br>
+배열을 선언할 때는 데이터 타입 뒤어 []를 붙여야 한다. <br>
+[]이 없다면 classGroup은 배열이 아니라 문자열 데이터 타입을 갖는 변수가 된다. <br>
 
-## List Data Structure
-순서, 중복허용
+1. for-each 구문 <br>
+for 구문을 좀 더 간편하게 사용하기 위해 만들어짐.
 
-### Data Add
-<img width="835" alt="Screenshot 2024-04-27 at 13 41 27" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/9951de72-5541-4462-a8c6-d5502a1248df">
+### 9. Method
+main: 만들고 싶은 프로그램이 있다면 반드시 public static void main(String[] args)가 이끄는 중괄호 안에 실행되기를 기대하는 로직을 위치시켜야 한다.
 
-### Data Delete
-<img width="841" alt="Screenshot 2024-04-27 at 13 44 45" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/7c0a91d2-b622-4234-841a-71092ceb0b08">
+자주 사용하는 로직을 메소드로 만들어두면 호출하는 것을 통해서 간편하게 로직을 재활용할 수 있다. 
 
-### List Operation
-처음, 끝, 중간에 엘리먼트를 추가/삭제하는 기능 <br>
-리스트에 데이터가 있는지를 체크하는 기능 <br>
-리스트의 모든 데이터에 접근할 수 있는 기능 
+메소드의 입력값은 매개변수(parameter)를 통해서 이루어진다. 
 
-### 언어별 비교
-1. **C**: list (지원하지 x), 직접 만들거나, 남이 만든 Library를 사용해야 함 <br>
-2. **JavaScript**: array = list <br>
-```javascript
- numbers = [10,20,30,40,50];
+메소드 안에 고정적인 매개변수를 넣어놓고 가변적인 입력값을 통해서 결과값을 도출한다.
 
- numbers.splice(3,1);
+메소드의 출력값: return
 
- for(i=0 < numbers.length; i++){ 
-   console.log(numbers[i]); 
- } 
-```
- 3. **Python**: list = array
-```python
- numbers = [10,20,30,40,50];
+### 10. 입력과 출력 I/O
+예를 들어 사용자의 키보드, 마우스, 터치를 입력으로 받아들일 수 있고, 그에 따른 처리 결과를 모니터나 스피커등으로 출력 할 수 있다. <br>
+입력 값이 없는 application은 input이 없는 method처럼 똑같은 결과를 반복하는 것에 불과하다. <br>
+--> CLI (Command Line Interface)
 
- numbers.pop(3)
+GUI (Graphic User Interface) <br>
 
- for number in numbers:
-   print(number);
-```
+--> 절차 지향적 프로그래밍
 
-결론: 최근의 언어는 리스트를 기본적으로 지원한다. <br>
+앞으로는 객체 지향적 프로그래밍
 
-4. **Java**: 배열과 리스트를 모두 지원하고 두 가지가 구분되어 있다.
-```java
-array: int[] numbers = {10,20,30,40,50};
-
-list: 
-ArrayList numbers = new ArrayList(); 
-numbers.add(10); 
-numbers.add(20); 
-numbers.add(30); 
-numbers.add(40); 
-numbers.add(50); 
-numbers.remove(3);
-```
-
-LinkedList numbers = new LinkedList();
-
-ArrayList numbers = new ArrayList();
-
---> 자바는 두 가지 형태의 리스트를 지원한다: LikedList, ArrayList (Tradeoff)
-
-<img width="812" alt="Screenshot 2024-04-27 at 13 58 26" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/e630e796-ee8a-4905-947e-3ced2a97d3e3">
+### 11. 객체 지향 프로그래밍 Objectp-Oriented Programming 
 
 
 
 
-Array List 개념 (7)
 
 
-    
- 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
