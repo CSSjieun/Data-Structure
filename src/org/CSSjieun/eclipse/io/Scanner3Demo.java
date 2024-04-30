@@ -13,7 +13,7 @@ public class Scanner3Demo {
 				System.out.println(sc.nextInt()*10);
 			}
 			sc.close();
-		} catch(FileNotFoundException e) {
+		} catch(FileNotFoundException e) { // 예외
 			e.printStackTrace();
 		}
 
