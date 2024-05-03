@@ -145,8 +145,54 @@ Instance: 제품/ method의 호출 (비유)
 2. 인스턴스를 생성할 필요가 없는 값을 클래스에 저장하고 싶은 경우
 3. 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우
 
-(76)
+### 14. 클래스 멤버, 인스턴스 멤버: 클래스 메소드
+Class의 메소드는 class에 직접 접근해서 바로 메소드를 사용할 수 있다.
 
+```java
+예) Calculator c1 = new Calculator();
+   c1.setOperands(10, 20);
+   c1.sum();
+   c1.avg();
+```
+
+   --> c1, c2... 이 각각 존재해야 하며, 그 instances 들에 각각 다른 결과값을 가져야 할 때 instance를 만든다.
+
+하지만, 그럴 필요가 없을 때는 class의 method를 직접 사용할 수도 있다.
+
+```java
+예) public static void sum(int left, int right){
+        System.out.println(left+right);
+}
+
+  public static main(String[] args){
+      Calculator.sum(10, 20);
+
+      Calculator.sum(20, 40);
+  }
+```
+
+### 15. 클래스 멤버, 인스턴스 멤버: 타입별 비교
+1. 인스턴스 메소드는 클래스 멤버에 접근 할 수 있다. (static이라는 키워드를 가지고 있지 않음)
+2. 클래스 메소드는 인스턴스 멤버에 접근 할 수 없다. (static이라는 키워드를 가지고 있음)
+   인스턴스 변수는 인스턴스가 만들어지면서 생성되는데, 클래스 메소드는 인스턴스가 생성되기 전에 만들어지기 때문에 클래스 메소드가 인스턴스 멤버에 접근하는 것은 존재하지 않는 인스턴스 변수에 접근하는 것과 같다.
+
+용어<br>
+- 인스턴스 변수 = Non-Static Field
+- 클래스 변수 = Static Field
+
+Field라는 것은 클래스 전역에서 접근 할 수 있는 변수를 의미하는데 이에 대한 자세한 내용은 유효범위 수업에서 알아본다.
+
+### 16. 유효범위: 유효범위란?
+유효범위 Scopte <br>
+변수와 메소드 같은 것들을 사용할 수 있는 것은 이름이 있기 때문이다. <br>
+아래 코드에서 left는 변수의 이름이고, sum은 메소드의 이름이다. 
+
+```java
+int left;
+public void sum(){}
+```
+
+79
 
 
    
