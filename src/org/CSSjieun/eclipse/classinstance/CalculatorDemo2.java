@@ -1,4 +1,4 @@
-package org.CSSjieun.eclipase.classinstance;
+package org.CSSjieun.eclipse.classinstance;
 
 class Calculator2 {
 	
