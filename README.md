@@ -146,9 +146,30 @@ Instance: 제품/ method의 호출 (비유)
 3. 값의 변경 사항을 모든 인스턴스가 공유해야 하는 경우
 
 ### 14. 클래스 멤버, 인스턴스 멤버: 클래스 메소드
+Class의 메소드는 class에 직접 접근해서 바로 메소드를 사용할 수 있다.
 
+```java
+예) Calculator c1 = new Calculator();
+   c1.setOperands(10, 20);
+   c1.sum();
+   c1.avg();
+```
 
+   --> c1, c2... 이 각각 존재해야 하며, 그 instances 들에 각각 다른 결과값을 가져야 할 때 instance를 만든다.
 
+하지만, 그럴 필요가 없을 때는 class의 method를 직접 사용할 수도 있다.
+
+```java
+예) public static void sum(int left, int right){
+        System.out.println(left+right);
+}
+
+  public static main(String[] args){
+      Calculator.sum(10, 20);
+
+      Calculator.sum(20, 40);
+  }
+```
 
    
 
