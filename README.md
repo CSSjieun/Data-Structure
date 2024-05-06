@@ -201,7 +201,16 @@ Directory를 생각하면 쉽다. 처음에는 file이 있었다. 그런데 file
 이 문제의 해결책으로 고안된 것이 directory이다. Directory는 file을 grouping해서 그룹별로 파일을 격리한다. <br>
 Directory 내에서는 파일명이 중복되면 안 되지만 directory 밖의 파일명과는 중복이 돼도 문제가 없다. <br>
 덕분에 마음 놓고 다른 사람이 만든 file이 담긴 directory를 자신의 directory로 가져올 수 있게 되었다.
-80
+
+<img width="1071" alt="Screenshot 2024-05-06 at 22 46 03" src="https://github.com/CSSjieun/Data-Structure/assets/152406885/2a8ac0cd-07cb-43df-89bf-5aeb59117b36">
+
+method a()에 속한 왼쪽의 method에서 선언된 i는 지역변수 local variable, <br>
+mehtod a()에 속하지 않은 오른쪽의 class 바로 밑에서 int로 선언된 i는 전역변수 global variable이다. method a()에서는 i를 선언하지 i=0;으로 않고 할당만 했다.
+
+
+
+
+81
 
 
    
